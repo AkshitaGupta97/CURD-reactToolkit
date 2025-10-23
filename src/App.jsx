@@ -1,11 +1,12 @@
 
 import './App.css'
+import RecordTable from './components/RecordTable'
 
 function App() {
 
   return (
     <>
-      he;lkdlka
+     <RecordTable />
     </>
   )
 }
