@@ -1,12 +1,24 @@
 import { X } from 'lucide-react'
-import React from 'react'
+import { useState } from 'react';
+import { useDispatch } from 'react-redux'
 
-function RecordModel() {
+
+function RecordModel({isOpen, onClose, currentRecord}) {
+
+    const dispatch = useDispatch();
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        position: '',
+    })
+
   return (
     <div className='fixed inset-0 backdrop-blur-sm flex items-center justify-center p-4 z-50'>
         <div className='bg-amber-100 rounded-lg shadow-2xl max-w-lg w-full max-h-10/12'>
             {/* Header */}
-            <div className='flex items-center justify-between p-6 border-b border-amber-200'>
+            <div className='flex items-center justify-between p-6 border-b border-amber-100'>
                 <h2 className='text-xl font-bold text-amber-900'>
                     Register New record
                 </h2>
